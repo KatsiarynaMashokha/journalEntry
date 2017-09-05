@@ -16,6 +16,13 @@ $(function(){
     output.forEach(function(element) {
       $('#allEntries').append("<li> Title: " + element.title + "<br> Entry: " +   element.entryBody + "</li>");
     });
+  });
+  $("#currentEntry").submit(function(event){
+    event.preventDefault();
+    var entryNumber = $("#entryNumber").val();
+    var operationId = $('#dropdownList').val();
+
+    $('#result').text(journal.getResult(entryNumber, operationId));
 
   });
 });
