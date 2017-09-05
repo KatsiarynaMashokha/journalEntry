@@ -1,19 +1,17 @@
-var entries = [];
-
-function Entry(title, entryBody) {
-  this.id = "";
-  this.title = title;
-  this.entryBody = entryBody;
+function Journal() {
+  this.entries = [];
 }
 
-Entry.prototype.journal = function() {
-  entries.push(Entry);
-  Entry.id = entries.length;
-  return entries;
-}
-
-
-// Entry.prototype.getResult = function(number, operation) {
+Journal.prototype.addEntry = function(newEntry) {
+  console.log(this.entries);
+  this.entries.push(newEntry);
+  console.log("entr: " + this.entries);
+    newEntry.id = this.entries.length;
+  console.log("id " + newEntry.id);
+  return this.entries;
+};
+exports.journalModule = Journal;
+// function getResult(number, operation) {
 //   var thisEntry = entries[number];
 //   if (operation == 1) {
 //
@@ -28,7 +26,14 @@ Entry.prototype.journal = function() {
 // }
 //
 // function getSentence() {
+//   var sentence = thisEntry.split(/^(.*?)[.?!]\s/);
 //
 // }
-
-exports.journalModule = Entry;
+//
+// function countConsonants() {
+//
+// }
+//
+// function countVowels() {
+//
+// }

@@ -6,5 +6,5 @@ $(function(){
     var resultValue = getResult(entryNumber, dropDown);
 
     $("#result").prepend("<p>" + resultValue + "</p>");
-  })
+  });
 });
