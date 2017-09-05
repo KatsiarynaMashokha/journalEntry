@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>My Journal</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron"><h2>Our journal:</h2></div>
+      <form id="newEntry">
+        <div class="form-group">
+          <label for="journalTitle">Journal Title</label>
+          <input id="journalTitle" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="journalEntry">Journal Entry</label>
+          <input id="journalEntry" type="text" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <h3>All entries</h3>
+      <ol id="allEntries"></ol>
+      <form id="currentEntry">
+        <div class="form-group">
+          <label for="entryNumber"> Enter entry number</label>
+          <input id ="entryNumber" type="number" class="form-control">
+        </div>
+        <div class="form-group">
+        <select class="form-control" id="dropdownList">
+          <option value="1">First sentence</option>
+          <option value="2">Number of consonants</option>
+          <option value="3">Number of vowels</option>
+        </select>
+      </div>
+        <button type="submit" class="btn btn-success">Find Entry!</button>
+      </form>
+      <div id="result">
+
+      </div>
+
+
+  </div>
+  </body>
+</html>
